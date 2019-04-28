@@ -1,0 +1,28 @@
+{
+  "name": "our-korea-trip",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livelikeabel/our-korea-trip.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/livelikeabel/our-korea-trip/issues"
+  },
+  "homepage": "https://github.com/livelikeabel/our-korea-trip#readme",
+  "devDependencies": {
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
