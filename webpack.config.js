@@ -12,8 +12,10 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
+    port: port,
     contentBase: './dist',
-    hot: true
+    hot: true,
+    open: true
   },
   module: {
     rules: [
@@ -43,7 +45,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Our Korea Trip'
+      template: 'public/index.html',
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
