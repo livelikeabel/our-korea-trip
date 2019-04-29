@@ -1,4 +1,3 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
@@ -7,14 +6,16 @@ const port = process.env.PORT || 3000;
 
 module.exports = {
   mode: 'development',
-  entry: {
-    app: './src/index.js'
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.[hash].js',
+    publicPath: '/'
   },
   devtool: 'inline-source-map',
   devServer: {
     port: port,
-    contentBase: './dist',
     hot: true,
+    historyApiFallback: true,
     open: true
   },
   module: {
@@ -54,9 +55,5 @@ module.exports = {
       template: 'public/index.html',
     }),
     new webpack.HotModuleReplacementPlugin()
-  ],
-  output: {
-    filename: '[name].bundle.[hash].js',
-    path: path.resolve(__dirname, 'dist')
-  }
+  ]
 };
