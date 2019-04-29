@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
+const port = process.env.PORT || 3000;
+
 module.exports = {
   mode: 'development',
   entry: {
@@ -16,8 +18,25 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
+      {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              camelCase: true,
+              sourceMap: true
+            }
+          }
+        ]
       }
     ]
   },
@@ -29,7 +48,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].bundle.[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
