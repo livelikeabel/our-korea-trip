@@ -1,1 +1,12 @@
-export { default } from './Main';
+import React from 'react';
+import MainHeader from './MainHeader';
+
+const Main = () => {
+  return (
+    <div>
+      <MainHeader />
+    </div>
+  )
+}
+
+export default Main;

@@ -1,0 +1,13 @@
+@import '../../style/colors.scss';
+
+.MainHeader {
+  background: $red500;
+  border-top: 1px solid $red600;
+  h2 {
+    margin: 56px 0 16px;
+    font-size: 36px;
+    font-weight: 400;
+    color: $white1;
+    text-align: center;
+  }
+}
