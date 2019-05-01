@@ -61,6 +61,7 @@
     "react-icons": "^3.6.1",
     "react-prop-types": "^0.4.0",
     "react-router-dom": "^5.0.0",
+    "react-slick": "^0.24.0",
     "sass-loader": "^7.1.0"
   }
 }
