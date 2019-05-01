@@ -1,12 +1,16 @@
-import _ from 'lodash';
+import { AppContainer } from 'react-hot-loader';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-function component() {
-  const element = document.createElement('div');
+const render = Component =>
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById('root')
+  );
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+render(App);
 
-  return element;
-}
-
-document.body.appendChild(component());
+if(module.hot) module.hot.accept('./App', () => render(App));
