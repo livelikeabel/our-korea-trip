@@ -1,5 +1,12 @@
 @import '../style/colors.scss';
 
 .Header {
+  height: 66px;
+  line-height: 66px;
   background: $red500;
+  h1 {
+    font-size: 28px;
+    color: $white1;
+    text-align: center;
+  }
 }
