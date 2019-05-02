@@ -13,6 +13,13 @@ const DEFAULT_CONFIG = {
   dots: true,
   customPaging: () => <button />
 };
+const CUSTOM_ICON_BUTTON_STYLE = {
+  height: 40,
+  width: 40,
+  padding: 0, background: '#fff',
+  boxShadow: '0 0 0 1px rgba(0,0,0,.05), 0 2px 6px 0 rgba(0,0,0,.05), 0 4px 12px 0 rgba(0,0,0,.05)'
+};
+const CUSTOM_SVG_STYLE = { stroke: "#3F3F3F" }
 
 class Carousel extends PureComponent {
   constructor(props) {
@@ -23,8 +30,9 @@ class Carousel extends PureComponent {
     <div className={`arrow-${direction}`}>
       <IconButton
         onClick={this._handleSlide.bind(this, direction)}
+        style={CUSTOM_ICON_BUTTON_STYLE}
       >
-        <Chevron direction={direction} customStyle={{ stroke: "red" }} />
+        <Chevron direction={direction} customStyle={CUSTOM_SVG_STYLE} />
       </IconButton>
     </div>
   );
@@ -43,7 +51,7 @@ class Carousel extends PureComponent {
     };
     return (
       <>
-        <div>
+        <div className="Carousel-arrow">
           {this._renderArrow('left')}
           {this._renderArrow('right')}
         </div>

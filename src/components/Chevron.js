@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Chevron.scss';
 
 const pointDirection = {
   left: 'translate(3.5 12)',
@@ -10,9 +9,10 @@ const pointDirection = {
 const svgStyle = {
   fill: 'none',
   width: '20px',
-  height: '48px',
+  height: '20px',
   stroke: 'grey',
   strokeLinecap: 'round',
+  strokeWidth: "5"
 }
 
 const Chevron = ({ direction, customStyle }) => (
