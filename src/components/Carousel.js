@@ -25,11 +25,9 @@ class Carousel extends PureComponent {
       ...slickProps
     };
     return (
-      <div>
-        <Slick {...slickConfig} ref={this._slickRef}>
-          {children}
-        </Slick>
-      </div>
+      <Slick {...slickConfig} ref={this._slickRef}>
+        {children}
+      </Slick>
     )
   }
 };

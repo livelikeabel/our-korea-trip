@@ -5,8 +5,10 @@ import seoul from '../../images/seoul.png';
 import './CityCarousel.scss';
 
 const CITY_CAROUSEL_PROPS = {
+  autoplay: false,
   slidesToShow: 6,
-  slidesToScroll: 6
+  slidesToScroll: 6,
+  dots: false
 }
 
 const CityCarousel = () => {
@@ -18,7 +20,7 @@ const CityCarousel = () => {
       <CityCard herf="/" title="서울" img={seoul}/>
       <CityCard herf="/" title="서울" img={seoul}/>
       <CityCard herf="/" title="서울" img={seoul}/>
-      <CityCard herf="/" title="서울" img={seoul} />
+      <CityCard herf="/" title="서울" img={seoul}/>
       <CityCard herf="/" title="서울" img={seoul}/>
       <CityCard herf="/" title="서울" img={seoul}/>
       <CityCard herf="/" title="서울" img={seoul}/>
