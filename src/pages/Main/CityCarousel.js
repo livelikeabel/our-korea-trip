@@ -11,13 +11,11 @@ const CITY_CAROUSEL_PROPS = {
   dots: false
 }
 
-const CityCarousel = () => {
-  return (
-    <Carousel slickProps={CITY_CAROUSEL_PROPS}>
-      {cityData.map(city => <CityCard {...city} key={city.name} />)}
-    </Carousel>
-  )
-}
+const CityCarousel = () => (
+  <Carousel slickProps={CITY_CAROUSEL_PROPS}>
+    {cityData.map(city => <CityCard {...city} key={city.name} />)}
+  </Carousel>
+)
 
 const CityCard = ({ href, img, name }) => (
   <Link to={href} className="CityCard" style={{ backgroundImage: `url(${img})` }}>

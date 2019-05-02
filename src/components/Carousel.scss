@@ -103,18 +103,21 @@
   top: -7px;
   display: flex;
   align-items: center;
+  z-index: 1;
+  pointer-events: none;
   height: 100%;
   width: 1100px;
   margin: auto;
   transform: translate(-50%, 0);
   left: 50%;
-  z-index: 1;
 }
 .arrow-right {
+  pointer-events: auto;
   position: absolute;
   right: 0;
 }
 .arrow-left {
+  pointer-events: auto;
   position: absolute;
   left: 0;
 }

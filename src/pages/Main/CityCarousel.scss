@@ -1,9 +1,5 @@
 @import '../../style/colors.scss';
 
-.CityCarousel {
-
-}
-
 .CityCard {
   display: inline-block;
   position: relative;
@@ -15,6 +11,9 @@
   border-radius: 4px;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,.3), 0 0 1px 0 rgba(0,0,0,.3);
   transition: box-shadow .2s ease;
+  &:hover {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,.4), 0 0 2px 0 rgba(0,0,0,.4);
+  }
   &__wrapper {
     height: 100%;
     width: 100%;
