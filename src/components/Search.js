@@ -15,7 +15,7 @@ const Search = ({placeholder}) => {
 Search.defaultProps = {
   placeholder: '가고 싶은 곳을 검색해보세요!'
 };
-Search.PropTypes =  {
+Search.propTypes =  {
   placeholder: PropTypes.string
 };
 

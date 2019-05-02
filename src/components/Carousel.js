@@ -1,6 +1,8 @@
 import React, { PureComponent, createRef } from 'react';
 import PropTypes from 'prop-types';
 import Slick from 'react-slick';
+import './Carousel.scss';
+
 
 const DEFAULT_CONFIG = {
   autoplay: true,
@@ -32,10 +34,12 @@ class Carousel extends PureComponent {
   }
 };
 Carousel.defaultProps = {
-  children: []
+  children: [],
+  slickProps: {}
 };
 Carousel.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  slickProps: PropTypes.object
 };
 
 export default Carousel;
