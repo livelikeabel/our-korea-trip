@@ -1,0 +1,11 @@
+@import "../../style/colors.scss";
+
+.MapSearchResult {
+  width: 530px;
+  h2 {
+    color: $grey700;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 16px 10px;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../style/colors.scss';
+
+.MainHeader {
+  height: 310px;
+  margin: 0 0 76px;
+  border-top: 1px solid $red600;
+  background: $red500;
+  h2 {
+    margin: 56px 0 16px;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.39;
+    color: $white1;
+    text-align: center;
+  }
+  &__search {
+    width: 430px;
+    margin: 0 auto;
+  }
+  &__carousel-wrapper {
+    position: relative;
+  }
+  &__carousel {
+    margin: 48px auto 0;
+    height: 124px;
+    width: 1080px;
+  }
+}
