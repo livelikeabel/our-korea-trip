@@ -1,0 +1,12 @@
+@import '../style/colors.scss';
+
+.Footer {
+  background: $grey700;
+  padding: 60px 0;
+  margin: 100px 0 0;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  color: $grey300;
+  font-size: 20px;
+}

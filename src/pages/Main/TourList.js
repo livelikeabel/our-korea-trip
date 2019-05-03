@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from '../../components/Carousel';
 import TripInfoCard from '../../components/TripInfoCard';
-import './RecentTourList.scss';
+import './TourList.scss';
 
 const CAROUSEL_PROPS = {
   autoplay: false,
@@ -10,10 +10,10 @@ const CAROUSEL_PROPS = {
   dots: false
 }
 
-const RecentTourList = () => {
+const TourList = ({title}) => {
   return (
-    <div className="RecentTourList">
-      <h2>최근 본 여행지</h2>
+    <div className="TourList">
+      <h2>{title}</h2>
       <Carousel slickProps={CAROUSEL_PROPS}>
         <TripInfoCard/>
         <TripInfoCard/>
@@ -29,4 +29,4 @@ const RecentTourList = () => {
   )
 };
 
-export default RecentTourList;
+export default TourList;
