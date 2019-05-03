@@ -2,6 +2,7 @@ import React from 'react';
 import MainHeader from './MainHeader';
 import MainMap from './MainMap';
 import MapSearchResult from './MapSearchResult';
+import RecentTourList from './RecentTourList';
 import './index.scss';
 
 const Main = () => {
@@ -12,6 +13,7 @@ const Main = () => {
         <MainMap />
         <MapSearchResult />
       </div>
+      <RecentTourList />
     </div>
   )
 }
