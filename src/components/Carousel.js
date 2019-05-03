@@ -50,7 +50,7 @@ class Carousel extends PureComponent {
       ...slickProps
     };
     return (
-      <>
+      <div className="Carousel">
         {showArrowBtn &&
           <div className="Carousel-arrow">
             {this._renderArrow('left')}
@@ -60,7 +60,7 @@ class Carousel extends PureComponent {
         <Slick {...slickConfig} ref={this._slickRef}>
           {children}
         </Slick>
-      </>
+      </div>
     )
   }
 };

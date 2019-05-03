@@ -1,6 +1,8 @@
 @import '../style/colors.scss';
 
 .TripInfoCard {
+  position: relative;
+  left: 7.5px;
   box-sizing: border-box;
   width: 250px;
   height: 332px;
