@@ -5,7 +5,16 @@ import MapSearchResult from './MapSearchResult';
 import TourList from './TourList';
 import './index.scss';
 
+import {useEffect} from 'react'; 
+import simpleFetch from '../../constants/simpleFetch';
+
 const Main = () => {
+
+  useEffect(() => {
+    console.log('한번만 실행돼?')
+    simpleFetch('cityData').then(res => console.log(res))
+  },[])
+
   return (
     <div className="Main">
       <MainHeader />
@@ -13,7 +22,7 @@ const Main = () => {
         <MainMap />
         <MapSearchResult />
       </div>
-      <TourList title="최근 본 여행지"/>
+      <TourList title="추천 여행지"/>
       <TourList title="신규 여행지"/>
     </div>
   )
