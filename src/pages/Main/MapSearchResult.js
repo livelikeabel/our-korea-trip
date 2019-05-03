@@ -16,7 +16,7 @@ const MapSearchResult = () => {
   return (
     <div className="MapSearchResult">
       <h2>서울 여행지 추천 해드려요!</h2>
-      <Carousel slickProps={CAROUSEL_PROPS}>
+      <Carousel slickProps={CAROUSEL_PROPS} showArrowBtn={false}>
         <TripInfoCard />
         <TripInfoCard />
         <TripInfoCard />

@@ -1,4 +1,5 @@
 /* Slider */
+@import "./../style/colors.scss";
 
 .slick-slider {
   position: relative;
@@ -120,4 +121,31 @@
   pointer-events: auto;
   position: absolute;
   left: 0;
+}
+
+.slick-dots {
+  // background: $red500;
+  display: flex !important;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  li {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: $red200;
+  }
+}
+.slick-active button {
+  background: $red400;
 }

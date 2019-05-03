@@ -43,7 +43,7 @@ class Carousel extends PureComponent {
   }
 
   render() {
-    const { children, slickProps } = this.props;
+    const { children, slickProps, showArrowBtn } = this.props;
 
     const slickConfig = {
       ...DEFAULT_CONFIG,
@@ -51,10 +51,12 @@ class Carousel extends PureComponent {
     };
     return (
       <>
-        <div className="Carousel-arrow">
-          {this._renderArrow('left')}
-          {this._renderArrow('right')}
-        </div>
+        {showArrowBtn &&
+          <div className="Carousel-arrow">
+            {this._renderArrow('left')}
+            {this._renderArrow('right')}
+          </div>
+        }
         <Slick {...slickConfig} ref={this._slickRef}>
           {children}
         </Slick>
@@ -64,11 +66,13 @@ class Carousel extends PureComponent {
 };
 Carousel.defaultProps = {
   children: [],
-  slickProps: {}
+  slickProps: {},
+  showArrowBtn: true
 };
 Carousel.propTypes = {
   children: PropTypes.node,
-  slickProps: PropTypes.object
+  slickProps: PropTypes.object,
+  showArrowBtn: PropTypes.bool
 };
 
 export default Carousel;
