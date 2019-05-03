@@ -1,0 +1,31 @@
+@import '../../style/colors.scss';
+
+.CityCard {
+  display: inline-block;
+  position: relative;
+  left: 10px;
+  height: 107px;
+  width: 160px ;
+  background-size: cover;
+  margin: 0 20px 10px 0px;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,.3), 0 0 1px 0 rgba(0,0,0,.3);
+  transition: box-shadow .2s ease;
+  &:hover {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,.4), 0 0 2px 0 rgba(0,0,0,.4);
+  }
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(166deg,#fff 40%,hsla(0,0%,100%,0) 68%);
+    border-radius: 4px;
+  }
+  h3 {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $grey900;
+  }
+}
