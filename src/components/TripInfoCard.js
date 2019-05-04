@@ -1,27 +1,34 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import seoul from '../images/seoul.png';
 import './TripInfoCard.scss';
 
-const TripInfoCard = () => {
+const TripInfoCard = ({tags, img, title, discription}) => {
   return (
     <div className="TripInfoCard">
-      <Link>
-        <img src={seoul} />
+      <Link to="/">
+        <img src={img} />
         <div className="TripInfoCard__info">
           <div className="TripInfoCard__info__tags">
-            <span>서울</span><span>경리단</span>
+            {tags.map((tag, i) => <span key={i}>{tag}</span>)}
           </div>
           <div className="TripInfoCard__info__title">
-            [제2롯데월드] 하늘과 맞닫는 121층 높이의 잠실타워
+            {title}
           </div>
           <p className="TripInfoCard__info__discription">
-            초고층 높이에서 서울의 뷰를 한눈에 볼 수 있는 곳.
+            {discription}
           </p>
         </div>
       </Link>
     </div>
   )
+}
+
+TripInfoCard.propTypes = {
+  tags: PropTypes.array,
+  img: PropTypes.string,
+  title: PropTypes.string,
+  discription: PropTypes.string
 }
 
 export default TripInfoCard;

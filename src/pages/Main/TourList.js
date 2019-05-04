@@ -10,23 +10,16 @@ const CAROUSEL_PROPS = {
   dots: false
 }
 
-const TourList = ({title}) => {
+const TourList = ({ title, tripData }) => {
   return (
-    <div className="TourList">
-      <h2>{title}</h2>
-      <Carousel slickProps={CAROUSEL_PROPS}>
-        <TripInfoCard/>
-        <TripInfoCard/>
-        <TripInfoCard/>
-        <TripInfoCard/>
-        <TripInfoCard/>
-        <TripInfoCard/>
-        <TripInfoCard/>
-        <TripInfoCard/>
-        <TripInfoCard/>
-      </Carousel>
-    </div>
+    tripData.length === 0 ? null :
+      <div className="TourList">
+        <h2>{title}</h2>
+        <Carousel slickProps={CAROUSEL_PROPS}>
+          {tripData.map(d => <TripInfoCard key={d._id} {...d} />)}
+        </Carousel>
+      </div>
   )
 };
 
-export default TourList;
+export default React.memo(TourList);
