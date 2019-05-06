@@ -11,21 +11,17 @@ const CAROUSEL_PROPS = {
   slidesPerRow: 2
 }
 
-const MapSearchResult = () => {
+const MapSearchResult = ({ searchData }) => {
   return (
     <div className="MapSearchResult">
-      <h2>서울 여행지 추천 해드려요!</h2>
-      <Carousel slickProps={CAROUSEL_PROPS} showArrowBtn={false}>
-        <TripInfoCard />
-        <TripInfoCard />
-        <TripInfoCard />
-        <TripInfoCard />
-        <TripInfoCard />
-        <TripInfoCard />
-        <TripInfoCard />
-        <TripInfoCard />
-        <TripInfoCard />
-      </Carousel>
+      {searchData.length === 0 ? null :
+        <>
+          <h2>서울 여행지 추천 해드려요!</h2>
+          <Carousel slickProps={CAROUSEL_PROPS} showArrowBtn={false}>
+            {searchData.map(d => <TripInfoCard {...d} key={d._id} />)}
+          </Carousel>
+        </>
+      }
     </div>
   )
 }
